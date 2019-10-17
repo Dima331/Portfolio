@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(rel='stylesheet', href='css/main.min.css')
+    title Aviana
+  body.body
+    .wrapper
+      include elements/header.pug
+      main.main
+        include sections/hero.pug    
+        .container-wall
+          include sections/projects.pug
+          include sections/control-camera.pug        
+          include sections/types-repair.pug
+          include sections/request.pug
+        include sections/wildest.pug  
+        .container-side      
+          include sections/design-project.pug            
+          include sections/how-working.pug
+          include sections/our-team.pug
+          include sections/our-clients.pug    
+          include sections/contacts.pug  
+      include elements/footer.pug
+    script(src="js/main.min.js")
+
+
+
