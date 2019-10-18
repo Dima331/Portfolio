@@ -5,26 +5,78 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
     link(rel='stylesheet', href='css/main.min.css')
+    link(rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css")
     title Aviana
   body.body
     .wrapper
-      include elements/header.pug
-      main.main
-        include sections/hero.pug    
-        .container-wall
-          include sections/projects.pug
-          include sections/control-camera.pug        
-          include sections/types-repair.pug
-          include sections/request.pug
-        include sections/wildest.pug  
-        .container-side      
-          include sections/design-project.pug            
-          include sections/how-working.pug
-          include sections/our-team.pug
-          include sections/our-clients.pug    
-          include sections/contacts.pug  
-      include elements/footer.pug
-    script(src="js/main.min.js")
+      section.face
+        .container
+          .hero
+            .hero__pic
+              img.hero__img(src='img/image.jpg' alt='face')
+            .hero__text.hero__text_margin
+              h4.hero__name
+                | Dmitriy Barkov
+              .hero__specialty
+                | Junior front-end developer
+          ul.contacts
+            li.contacts__item
+              | telegram: @Dimbar95
+            li.contacts__item
+              | email: dimbar331@gmail.com
+            li.contacts__item
+              | github: https://github.com/Dima331
+      section.education
+        .education__container.container
+          button.education__title#education__title.active Education
+          .education__text#education__text
+            p.text
+              | I graduated from Belarussian State University of Informatics and Radioelectronics.
+              | From 2012 to 2017, I studied at the Faculty of Computer-Aided
+              | Design and became a bachelor of information technologies.
+              | From 2017 to 2018, I studied at the Faculty of Computer-Aided Design and
+              | became a master of information technologies.
+            p.education__dec I finished three courses on the website loftshool.com:
+            ul.courses-list
+              li.courses-list__item
+                p.courses-list__text Web Development for Beginners
+                a.courses-list__link(href='https://loftschool.com/diploma/WJ1519072519/ru/pdf' target='_blank') certificate
+              li.courses-list__item
+                p.courses-list__text Advanced Web Development Course
+                a.courses-list__link(href='https://loftschool.com/diploma/DA1513014288/ru/pdf' target='_blank') certificate
+              li.courses-list__item
+                p.courses-list__text Comprehensive JavaScript training
+                a.courses-list__link(href='https://loftschool.com/diploma/DO43009335733/ru/pdf' target='_blank') certificate
+      section.slider
+        .container
+          .swiper-container
+            ul.swiper-wrapper
+              li.swiper-slide.slide 
+                .slide__text
+                  h4.slide__title Theyalow
+                  ul.description 
+                    li.description__item Perfect pixeled
+                    li.description__item Responsive
+                    li.description__item Svg
+                button(type="button").slide__btn Info
+                .slide__pic
+                  a(href="#").slide__link
+                    img(src="img/desktop1.jpg", alt="desktop").slide__img
+              li.swiper-slide.slide 
+                .slide__text
+                  h4.slide__title repair-design-project
+                  ul.description 
+                    li.description__item Perfect pixeled
+                    li.description__item Responsive
+                    li.description__item Interactive elements
+                button(type="button").slide__btn Info
+                .slide__pic
+                  a(href="#").slide__link
+                    img(src="img/desktop2.jpg", alt="desktop").slide__img
+            .swiper-button-prev
+            .swiper-button-next 
+      script(src="https://unpkg.com/swiper/js/swiper.min.js")
+      script(src="js/main.min.js")
 
 
 

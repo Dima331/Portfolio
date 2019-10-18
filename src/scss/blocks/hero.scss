@@ -1,0 +1,20 @@
+.hero{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__pic{
+    height: 260px;
+    display: flex;
+    justify-content: center;
+}
+.hero__text {
+    text-align: center;
+}
+
+.hero__text_margin{
+    margin-top: 20px;
+}
+.contacts{
+    margin-left: 20px;
+}

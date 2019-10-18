@@ -1,0 +1,50 @@
+.education__container{
+    flex-direction: column;
+    @include smView {
+        text-align: left;
+    }
+}
+.education__title{
+    font-size: 35px;
+    color: #01000b;
+    font-weight: 600; 
+    width: 100%;
+    border: 1px solid #000;
+    position: relative;
+    &:hover{
+        background-color: azure;
+    }
+}
+
+.education__title::after {
+    content: "";
+    position: absolute;
+    border: 17px solid transparent;
+    border-top-color: #0f5a47;
+    border-bottom-width: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 15px;
+    -webkit-transition: -webkit-transform .4s;
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s,-webkit-transform .4s;
+
+}
+.active{
+    &::after{
+          transform: translateY(-50%) rotate(180deg);
+    }
+  
+}
+.courses-list__link{
+    color: #2492de;
+    &:hover{
+        color: #870fd5;
+    }
+}
+.education__text{
+    padding: 10px 20px;
+    display: block;
+}
