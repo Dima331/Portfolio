@@ -106,6 +106,12 @@ gulp.task("fonts", () => {
         .pipe(reload({ stream: true }))
 });
 
+gulp.task("projects", () => {
+    return gulp.src("src/projects/**/*")
+        .pipe(gulp.dest('assets/projects'))
+        .pipe(reload({ stream: true }))
+});
+
 gulp.task("images", () => {
     return gulp.src('src/img/**/*.{png,gif,jpg,svg}')
     .pipe(gulp.dest('assets/img'))
@@ -119,4 +125,4 @@ gulp.watch("./src/img/**/*.{png,gif,jpg,svg}", gulp.series("images"));
 gulp.watch("./src/pages/**/*.pug", gulp.series("pug"));
 gulp.watch("./src/js/**/*.js", gulp.series("scripts"));
 
-gulp.task("default", gulp.series("clean", gulp.parallel("fonts","images", "pug", "sass", "scripts"), "server"));
+gulp.task("default", gulp.series("clean", gulp.parallel("fonts","images", "pug", "sass","projects", "scripts"), "server"));
